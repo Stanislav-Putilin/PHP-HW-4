@@ -9,3 +9,9 @@ function redirect(string $page){
     header("Location: /$page");
     exit;
 }
+
+function dump($arrey)
+{
+    echo '<pre>' . print_r($arrey,true) . '</pre>';
+}
+

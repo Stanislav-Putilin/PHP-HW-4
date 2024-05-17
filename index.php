@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once "./functions/helpers.php";
 ?>
 <!doctype html>
@@ -26,19 +26,20 @@ require_once "./functions/helpers.php";
                     <li class="nav-item">
                         <a class="nav-link" href="/contacts">Contacts</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/uploads">Uploads</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-
-
     <div class="container">
         <?php
         $page = $_GET['page'] ?? 'home';
-        if(file_exists("./pages/$page.php")){
+        if (file_exists("./pages/$page.php")) {
             require_once "./pages/$page.php";
-        } else{
+        } else {
             echo "Page Not Found";
         }
         ?>
